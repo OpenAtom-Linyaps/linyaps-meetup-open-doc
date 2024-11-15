@@ -7,6 +7,10 @@
 1. 已经安装`linglong-bin`和`linglong-builder`且具备桌面环境的Linux发行版(即ll-cli和ll-builder命令被使能)
 [如意玲珑环境当前官方支持的多个发行版安装方式](https://linglong.dev/guide/start/install.html)
 2. 确定你想用于封装所选网页的`Electron版本`,且本地目录中已经存在与该Electron版本相容的`Node.Js二进制文件`,并可以执行`npm`操作
+3. 由于需要转换图标格式, 需要安装此软件包以确保所有可选功能可以正常使用:
+```
+imagemagick-6.q16 
+```
 
 ### 可选
 1. 由于deepin 23属于目前在如意玲珑社区中作为适配活跃度比较高的发行版,建议使用deepin 23作为玲珑应用构建平台以体验更多特性
@@ -64,8 +68,18 @@ com.poki.super-fowlst-2_Super Fowlst 2_https://poki.com/zh/g/super-fowlst-2_"htt
 ❯ ./master-build.sh data/app-info.csv 
 ```
 
+该指令执行完成之后, 将会在build-pool目录中根据表格中提供的 `应用id` 生成构建目录
+执行之后再执行第二个脚本来将二进制文件构建、导出为可以真实安装的`binary.layer` 文件
+
+用法为执行脚本时传入一个参数,此参数为上一环节准备的数据表格,参考:
+```
+░▒▓ ~/linyaps-community/auto-electron-wrapper-next-7.4.3-linyaps/template ▓▒░───────────────────────────────────────────────────────────────░▒▓ 18:26:33 ▓▒░─╮
+❯ ./ll-build.sh data/app-info.csv 
+```
+
+
 ### 整理产出
-在任务结束后,你就可以在 `master-build.sh` 脚本所在目录的 `build-pool` 下找到你构建的应用包名，bins目录内已存放可以安装的 `binary.layer` 文件
+在任务结束后,你就可以在 `ll-build.sh` 脚本所在目录的 `build-pool` 下找到你构建的应用包名，bins目录内已存放可以安装的 `binary.layer` 文件
 示例结构:
 ```
 ├── build-pool
