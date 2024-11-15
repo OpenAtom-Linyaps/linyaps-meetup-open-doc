@@ -15,23 +15,10 @@
 
 2. 确认不存在已被认领的应用后, 就可以开始申领应用的流程了, 在这里表现为在[公共构建平台](https://github.com/linglongdev)组织中申请一个仓库
 参考[公共构建平台 仓库管理指导](https://github.com/linglongdev/Repository-Manager) 通过提交 `Pull requests` 来启动仓库申请流程.
+\* 提交PR前, 你需要先fork此仓库再修改、提交 
+
 流程合并后, 我们将会在[公共构建平台](https://github.com/linglongdev)的仓库列表中找到我们申请的应用专有仓库,这意味着我们从此刻起已经成为该应用的常态维护者了
 
-3. 访问该仓库并将其fork至用户个人仓库下
-
-4. 我们将fork后的仓库通过 `git clone` 同步到本地目录中, 提交该应用对应的玲珑应用构建工程配置文件 `linglong.yaml`
-
-5. 保存要提交的文件后, 依次通过 `git add` `git commit` `git push`操作将文件推送至源仓库
-
-6. 此时进入fork后的仓库可以看到存在与上游的commits差异,点击contribute即可通过 `Pull requests` 来将刚刚提及的文件推送至仓库
-
-7. 当`Pull requests`发起后, 将会触发[公共构建平台](https://github.com/linglongdev)的构建流程
-\* 仅有仓库中 `linglong.yaml` 的版本号(version)发生变化时, 才会触发构建流程
-
-8. 构建成功后, 自动化流程cicd将会返回兼容性自动测试的程序运行截图
-
-9. 当本次构建的应用通过兼容性测试后, 本次 `Pull requests` 将会被管理员合并. 合并后, 本次应用的构建将会被推送到应用仓库中提供下载,
-\* 对于已合并的提交, 可在 `Release` 页面下载到历史提交版本的安装文件 `binary.layer`.
 
 ### 开发者平台
 若你决定通过[统信开发者应用分发平台](https://www.chinauos.com/partner/distribute)进行玲珑生态的贡献, 在此之前你应当持有一个已经通过个人开发者认证的账户
