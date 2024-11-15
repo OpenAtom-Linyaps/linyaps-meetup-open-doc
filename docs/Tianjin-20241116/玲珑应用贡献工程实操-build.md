@@ -63,6 +63,10 @@ com.poki.super-fowlst-2_Super Fowlst 2_https://poki.com/zh/g/super-fowlst-2_"htt
 ░▒▓ ~/linyaps-community/auto-electron-wrapper-next-7.4.3-linyaps/template ▓▒░───────────────────────────────────────────────────────────────░▒▓ 18:26:33 ▓▒░─╮
 ❯ ./master-build.sh data/app-info.csv 
 ```
+完成再执行ll-build.sh
+```
+./ll-build.sh data/app-info.csv
+```
 
 ### 整理产出
 在任务结束后,你就可以在 `master-build.sh` 脚本所在目录的 `build-pool` 下找到你构建的应用包名，bins目录内已存放可以安装的 `binary.layer` 文件
