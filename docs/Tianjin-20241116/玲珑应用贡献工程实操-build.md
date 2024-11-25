@@ -67,6 +67,10 @@ com.poki.super-fowlst-2_Super Fowlst 2_https://poki.com/zh/g/super-fowlst-2_"htt
 ░▒▓ ~/linyaps-community/auto-electron-wrapper-next-7.4.3-linyaps/template ▓▒░───────────────────────────────────────────────────────────────░▒▓ 18:26:33 ▓▒░─╮
 ❯ ./master-build.sh data/app-info.csv 
 ```
+完成再执行ll-build.sh
+```
+./ll-build.sh data/app-info.csv
+```
 
 该指令执行完成之后, 将会在build-pool目录中根据表格中提供的 `应用id` 生成构建目录
 执行之后再执行第二个脚本来将二进制文件构建、导出为可以真实安装的`binary.layer` 文件
